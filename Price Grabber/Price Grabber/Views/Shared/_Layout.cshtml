@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+
+<html lang="en">
+
+<!--<![endif]-->
+
+<!-- Head BEGIN -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta content="Price Grabber" name="description">
+    <meta content="Price Grabber, Get cheaper price deals , deals and disounts" name="keywords">
+    <meta content="Price Grabber" name="author">
+
+    <link rel="shortcut icon" href="1.png">
+
+
+    <title>@ViewBag.Title - @Session["ApplicationName"]</title>
+
+    <!-- Fonts START -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|PT+Sans+Narrow|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
+    <!-- Fonts END -->
+
+    <!-- Global styles START -->
+    @Styles.Render("~/Content/globleCss")
+    <!-- Global styles END --> 
+
+
+    <!-- Theme styles START -->
+    @Styles.Render("~/Content/ThemeCss")
+    <!-- Theme styles END -->
+
+    @{ 
+
+        var Url = Request.RawUrl.ToString();
+        var UrlSplit=Url.Split('/');
+    }
+
+    @*@Scripts.Render("~/bundles/modernizr")
+
+    <script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+            function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+        }({
+            instrumentationKey:"ac2f6a53-5849-4f13-848b-071a03fd234e"
+        });
+        
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+    </script>*@
+
+
+    <link  href="@Url.Contains("~/content/theme/plugins/hoverimage/css/jquery.jqzoom.css")" rel="stylesheet" type="text/css"/>
+   
+</head>
+
+<!-- Head END -->
+
+<!-- Body BEGIN -->
+<body>
+ 
+    @if(UrlSplit.Count()>2 && (UrlSplit[2]== "Login" || UrlSplit[2] == "Register"|| UrlSplit[1] == "Notification" || UrlSplit[2] == "ResetPassword" || UrlSplit[2] == "ForgotPassword" || UrlSplit[2]== "ResetPasswordConfirmation"||UrlSplit[2]== "ForgotPasswordConfirmation" || UrlSplit[2]== "LogIn"))
+    {
+    @Html.Partial("_TopBar")
+    @RenderBody()
+    @Html.Partial("_Footer")  
+    @Html.Partial("_BottomBar")
+    }
+    else
+    {
+    @Html.Partial("_TopBar")
+    @Html.Partial("_Header",new  Price_Grabber.Models.SearchModel())
+    @RenderBody() 
+    @Html.Partial("_Footer")
+    @Html.Partial("_BottomBar")
+    }
+       
+ 
+ 
+<!-- Global Js START -->
+@Scripts.Render("~/bundles/globleFooterJs")
+<!-- Global Js END -->
+
+@Scripts.Render("~/bundles/Fancybox")
+@Scripts.Render("~/bundles/OwlCarousel")
+@Scripts.Render("~/bundles/Zoom")
+@Scripts.Render("~/bundles/BootstrapTouchspin")
+@Scripts.Render("~/bundles/Uniform")
+
+
+    @RenderSection("scripts", required: false)
+
+
+    <!-- Load javascripts at bottom, this will reduce page load time -->
+    <!-- BEGIN CORE PLUGINS(REQUIRED FOR ALL PAGES) -->
+    <!--[if lt IE 9]>
+    <script src="~/Content/Theme/plugins/respond.min.js"></script>
+    <![endif]-->
+    
+ 
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN PAGE LEVEL JAVASCRIPTS (REQUIRED ONLY FOR CURRENT PAGE) -->
+    
+    
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            
+            $('.inputRating').rating({ displayOnly: true, step: 0.5 });
+            ////Layout.init();
+            //Layout.initOWL();         
+            //Layout.initTouchspin();
+            //Layout.initUniform();
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+    <!-- END PAGE LEVEL JAVASCRIPTS -->
+
+</body>
+</html>

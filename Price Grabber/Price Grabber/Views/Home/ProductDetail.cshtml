@@ -1,0 +1,234 @@
+﻿@{
+    ViewBag.Title = "Product";
+}
+@model List<Price_Grabber.Models.ProductModel>
+
+
+<script src="~/Content/Theme/plugins/ProductDetail/js/jquery-1.6.js"></script>
+<script src="~/Content/Theme/plugins/ProductDetail/js/jquery.jqzoom-core-pack.js"></script>
+<script src="~/Content/Theme/plugins/ProductDetail/js/jquery.jqzoom-core.js"></script>
+<link href="~/Content/Theme/plugins/ProductDetail/css/jquery.jqzoom.css" rel="stylesheet" />
+@Styles.Render("~/Content/globleCss")
+@Styles.Render("~/Content/pagelevelCss")
+@Styles.Render("~/Content/ThemeCss")
+
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="container-fluid col-md-12" style="background-color:white;padding:20px;">
+           <div class="col-md-4">
+               <div class="col-md-12">
+                   <div class="col-md-6">
+                       <h3 style="color:darkorange">
+                           @if (!string.IsNullOrEmpty(item.AmazonPrice))
+                           {
+                               <img src="~/Content/Theme/img/logos/Amazon-logo.png" alt="Amazon Product" width="160" />
+                               //<text> Amazon Product</text>
+                           }
+                           else
+                           {
+                               <img src="~/Content/Theme/img/logos/ebay-128.png" alt="Ebay Product" />
+                               // @Html.Label("Ebay Product")
+                               //<text>Ebay Product</text>
+                           }
+                       </h3>
+                   </div>
+                   <div class="col-md-6">
+
+                       <br />
+                       @if (!string.IsNullOrEmpty(item.AmazonPrice))
+                       {
+                           <div class="col-md-12">
+                               <div class="main-img">
+                                   <a href="@item.Image" style="width:300px;height:300px;" class="minipic" title="Zoom" id="zoomImage">
+                                       <img id="main" src="@item.Image" />
+                                   </a>
+                               </div>
+                           </div>                          
+                       }
+                       else
+                       {
+                           <div class="col-md-12">
+                               <div class="main-img" style="position:relative;">
+                                   <a href="@item.Image" style="width:300px;height:300px;" class="minipic" title="Zoom" id="zoomImage">
+                                       <img id="main" src="@item.Image" />
+                                   </a>
+                               </div>
+                           </div>                          
+                       }
+                   </div>  
+               </div>
+               <div class="col-md-12">
+                   @if (!string.IsNullOrEmpty(item.AmazonPrice))
+                   {
+                           <div class="col-md-12">
+                            
+                               <div>
+                             <br /><br />
+                                   @foreach (var image in item.SmallImage)
+                                   {
+                                    <img class="hover " src="@image" style="cursor: pointer; margin-top: 0px; padding-left: 0px; padding-right: 0px; margin-right: 8px; margin-left: 5px; "/>
+                               
+                                   }
+                               </div>
+                           </div>
+                   }
+                   else
+                   {
+                               <text>Ebay see other Images
+                                   <a href="@item.EbayRedirect">Go To Store</a>
+                               </text>
+                   }
+               </div>                        
+           </div>
+            
+            <div class="col-md-4">
+                <br />
+                <h3 style="color:midnightblue">@item.Name</h3><br /> 
+                <h3 style="color:gray">Feature Description</h3>              
+               
+                <h6 style="color:darkgrey">  
+                   @if (!string.IsNullOrEmpty(item.AmazonPrice))
+                   {
+                         foreach (var feature in item.Features)
+                          {
+                             <text>@feature</text>
+                       }
+                   }
+                   else
+                   { <text>Ebay provide a better description so please
+                    <a href="@item.EbayRedirect">Go To Store</a>
+                      </text>
+                   }             
+               
+                </h6>
+            </div>
+            <div class="col-md-2">
+                <br />
+               
+                
+                <h4 style="color:red">
+                    @if (!string.IsNullOrEmpty(item.AmazonPrice))
+                    {
+                        <text><span style="color:forestgreen">Price:</span>
+                             <span style="color:red"></span>@item.AmazonPrice 
+                        </text>
+
+                    }
+                    else
+                    {
+                        <text><span style="color:forestgreen">Price:</span>
+                            <span class="fa fa-usd" style="color:red"></span>@item.EbayPrice .00
+                        </text>
+                    }                                
+                </h4>
+                <h5 style="color:forestgreen">
+                    In Stock
+                </h5>
+                <h5>
+                    @if (!string.IsNullOrEmpty(item.AmazonPrice))
+                    {
+                        <text><span style="color:forestgreen">Available:</span>
+                            <span style="color:blue">@item.AmaozonAvailable</span>
+                        </text>
+
+                    }
+                    else
+                    {
+                        <text><span style="color:forestgreen">Available:</span>
+                            <span style="color:blue">@item.EbayAvailable</span>
+                        </text>
+                    }                                  
+                </h5>
+                
+                <h5>
+                    @if (!string.IsNullOrEmpty(item.AmazonPrice))
+                    {
+                        <text><span style="color:forestgreen">Shipping</span>
+                             <a href="@item.AmazonRedirect">Go To Store</a>
+                        </text>
+
+                    }
+                    else
+                    {
+                        <text><span style="color:forestgreen">Shipping</span>
+                           <span style="color:blue">@item.EbayshippingInfo</span>
+                        </text>
+                    }
+                </h5>    
+            </div>
+            <div class="col-md-1 ">
+                @if (!string.IsNullOrEmpty(item.AmazonPrice))
+                { <br />
+                    <a class="hover" href="@Url.Action("Notification", "Notification",new { ProductName=item.Name })">
+                        <i class="fa fa-bell fa-lg" style="color:forestgreen">Notification</i>
+                    </a>
+                    <br /><br /><br />
+                    <a href="@item.AmazonRedirect" class="btn btn-primary btn-md">Amazon Store&nbsp;&nbsp;<i class="fa fa-chevron-circle-right"></i></a>
+
+                }
+                else
+                {
+                    <br />
+                    <a class="hover" href="@Url.Action("Notification", "Notification",new { ProductName=item.Name })">
+                        <i class="fa fa-bell fa-lg" style="color:forestgreen">Notification</i>
+                    </a>
+                    <br /><br /><br />
+                    <a href="@item.EbayRedirect" class="btn btn-primary btn-md">Ebay&nbsp;&nbsp; Store &nbsp;&nbsp;<i class="fa fa-chevron-circle-right"></i></a>
+
+                }
+               </div>
+        </div>
+    </div>
+}
+
+
+
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function ($) {
+
+        $('.hover').click(function () {
+            $('.minipic').removeData('jqzoom');
+            var url = $(this).attr('src');
+            var res = url.replace("SL500", "SL2000");
+            $("#main").attr('src', res);
+            $("#zoomImage").attr('href', res);
+            return false;
+        });
+
+
+
+        $(".main-img").mouseover(function(){
+
+            $('.minipic').jqzoom({
+                zoomType: 'standard',
+                lens: true,
+                preloadImages: false,
+                alwaysOn: false,
+                zoomHeight: 350,
+                zoomWidth: 350
+            });
+
+        });
+
+
+
+    });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

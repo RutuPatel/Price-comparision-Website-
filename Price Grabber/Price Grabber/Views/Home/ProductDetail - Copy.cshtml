@@ -1,0 +1,215 @@
+﻿@*@{
+    ViewBag.Title = "Product";
+}
+@model List<Price_Grabber.Models.ProductModel>
+
+
+<script src="~/Content/Theme/plugins/ProductDetail/js/jquery-1.6.js"></script>
+<script src="~/Content/Theme/plugins/ProductDetail/js/jquery.jqzoom-core-pack.js"></script>
+<script src="~/Content/Theme/plugins/ProductDetail/js/jquery.jqzoom-core.js"></script>
+<link href="~/Content/Theme/plugins/ProductDetail/css/jquery.jqzoom.css" rel="stylesheet" />
+@Styles.Render("~/Content/globleCss")
+@Styles.Render("~/Content/pagelevelCss")
+@Styles.Render("~/Content/ThemeCss")
+
+
+@*<script src="js/jquery-1.6.js"></script>*@
+
+@*<div class="col-md-12" style="background-color:white">
+    <a href="images/bike.jpg" class="minipic" title="Cartoon Bike"><img src="images/bikethumb.jpg" title="Bike" /></a>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.minipic').jqzoom({
+                zoomType: 'standard',
+                lens: true,
+                preloadImages: false,
+                alwaysOn: false,
+                zoomHeight: 200,
+                zoomWidth: 200
+            });
+        });
+    </script>
+</div>*@
+
+@*<style>
+.click {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.click img {
+    display: block;
+}
+
+.mainimg {
+    display: inline-block;
+}
+</style>*@
+
+
+
+
+  <!-- product details -->
+<div class="col-md-12" style="background-color:white;padding:20px;">
+
+    <div class="col-md-6">
+        <!-- more images -->
+        <div class="col-md-2">            
+            <div>
+              
+               @foreach (var item in Model.LargeImage)
+               { <img class="hover" src="@item" style="cursor:pointer;  margin-top:15px;" width="50" height="50" />
+               }                         
+            </div>
+        </div>
+
+        <!-- selected image -->
+        <div class="col-md-6 col-md-offset-1">
+            <div class="main-img" style="position:relative;">
+                <a href="@Model.Image" class="minipic" title="Zoom" id="zoomImage" >
+                    <img id="main" src="@Model.Image" width="300" height="300" />
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <br />
+            <br />
+            <br />
+            <br />
+            <h3 style="color:navy">@Model.Name</h3><br />
+            <h4 style="color:forestgreen">In Stock</h4><br />
+            <h3 style="color:orangered">Feature:</h3>
+            @foreach (var feature in Model.Features)
+            {
+                <h4>@feature</h4>
+            }
+
+        </div>
+    </div>
+    <div class="col-md-3 col-md-offset-3">
+       
+        <a class="hover" href="@Url.Action("Notification", "Notification",new { ProductName=Model.Name})">
+            <span class="fa fa-bell fa-lg" style="padding-left:30px">Alert Notification</span>
+        </a> 
+        @*<i type="button" class="btn btn-success btn-md fa fa-bell fa-lg" data-toggle="modal" data-target="#myModal">&nbsp;Set Alert Notififcation</i>*@
+
+    </div>
+
+    <div class="col-md-6">
+        <!-- product info -->       
+
+        <div class="col-md-5">
+            <br /><br />
+            <h2>Amazon Store</h2>
+            <hr />
+            <h3>Available:<span style="color:blue">@Model.AmaozonAvailable</span></h3>
+            <h3>Shipping Info:<span style="color:blue"></span></h3>
+            <h3>EMI: <span style="color:blue"></span></h3>           
+            <h3 style="color:red">Price:&nbsp;<span style="color:forestgreen">USD</span> @Model.AmazonPrice</h3><br />
+            <a href="@Model.AmazonRedirect" class="btn btn-primary btn-group-justified btn-lg">Go To Store &nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right"></i></a>
+
+            <h3></h3>
+        </div>
+        <div class="col-md-5 col-md-offset-1">
+            <br /><br />
+            <h2>Ebay Store</h2>
+            <hr />
+            <h3>Available:<span style="color:blue">@Model.EbayAvailable</span></h3>
+            <h3>Shipping Info:<span style="color:blue">@Model.EbayshippingInfo</span></h3>
+            <h3>EMI: <span style="color:blue"></span></h3>           
+            <h3 style="color:red">Price:&nbsp;<span style="color:forestgreen">USD</span>@Model.EbayPrice</h3><br />
+            <a href="@Model.EbayRedirect" class="btn btn-primary btn-group-justified btn-lg">Go To Store &nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right"></i></a>
+
+
+        </div>
+
+    </div>
+    @*<div class="col-md-12">
+            <h1>Store Options</h1>
+            <br />
+            <div class="col-md-8" style="background-color:#f0f0f0;">
+                <br />
+                   <div class="container col-md-12">
+                    <div class="col-md-2" style="padding-left: 0px;">
+                        <img class="hover" src="@Model.Image" width="150" height="150" style="padding-bottom: 20px;" />
+                    </div>
+                    <div class=" col-md-8">
+                        <h4 style="color:navy">@Model.Name</h4><br />
+                        <h3 style="color:red">Price: &nbsp;@Model.Price</h3><br />
+                    </div>
+                    <div class="col-md-2">
+                        <a href="@Model.Redirect" class="btn btn-primary btn-md" style="margin-top: 35px; margin-left: 10px;">Go To Store &nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right"></i></a>
+                    </div>
+                </div>
+                <hr />
+                <br />
+                <div class=" container col-md-12">
+                    <div class="col-md-2" style="padding-left: 0px;">
+                        <img class="hover" src="@Model.Image" width="150" height="150" style="padding-bottom: 20px;" />
+                    </div>
+                    <div class=" col-md-8">
+                        <h4 style="color:navy">@Model.Name</h4><br />
+                        <h3 style="color:red">Price:&nbsp;@Model.Price</h3><br />
+                    </div>
+                    <div class="col-md-2">
+                        <a href="@Model.Redirect" class="btn btn-primary btn-md" style="margin-top: 35px; margin-left: 10px;">Go To Store &nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <h1>Similiar Products</h1>
+            <div class="col-md-3 col-md-offset-1">
+
+
+            </div>
+        </div>*@
+</div>
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function ($) {
+
+        $('.hover').click(function () {
+            $('.minipic').removeData('jqzoom');
+            var url = $(this).attr('src');
+            //var res = url.replace("SL500", "SL2000");
+            $("#main").attr('src', url);
+            $("#zoomImage").attr('href', url);
+            return false;
+        });
+
+
+
+        $(".main-img").mouseover(function(){
+                     
+            $('.minipic').jqzoom({
+                zoomType: 'standard',
+                lens: true,
+                preloadImages: false,
+                alwaysOn: false,
+                zoomHeight: 350,
+                zoomWidth: 350
+            });
+           
+        });
+
+
+
+    });
+   
+</script>*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+

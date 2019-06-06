@@ -1,0 +1,78 @@
+﻿@using Price_Grabber.Models
+@model RegisterViewModel
+ @{
+     ViewBag.Title = "SignUp";
+}
+
+    <div class="main">
+        <div class="container">
+            
+            <div class="col-md-7">
+                <img src="~/Content/Theme/img/logos/signup.png" alt="logo" style="padding-top: 60px; padding-bottom: 40px; height: 450px; width: 450px; padding-left: 50px;" />
+            </div>
+            <div class="row">
+                <br />
+                <br />
+                <br />
+                <br />
+                <div class="col-md-5">
+                    <section id="loginForm">
+                       @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                       {
+                        
+                            @Html.AntiForgeryToken()
+                            <br />
+                            <br />
+                            <br />
+                            <h3 class="text-center" style="color:darkcyan">SIGNUP</h3>
+
+                            <br />
+                            @*@Html.ValidationSummary("", new { @class = "text-danger" })*@
+
+
+                            <div class="form-group " style="color:darkcyan">
+                                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "someone@example.com" })
+                                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group" style="color:darkcyan">
+                                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label", })
+                                <div class="col-md-10">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+
+                                </div>
+                            </div>
+                            <div class="form-group" style="color:darkcyan">
+                                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "Re-enter Password" })
+                                    @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group" >
+                                <div class="col-md-offset-2 col-md-10" style="color:darkcyan">
+                                    <input type="submit" class="btn btn-success" id="SIGNUP" value="SIGNUP"/>&nbsp;&nbsp;Already have account?@Html.ActionLink("Login", "Login")
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+
+                       }
+                    </section>
+                </div>
+                <div class="col-md-6">
+                    <section id="socialLoginForm">
+                        @*@Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })*@
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

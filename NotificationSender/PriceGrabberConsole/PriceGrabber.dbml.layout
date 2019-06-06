@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PriceGrabber">
+  <DataContextMoniker Name="/PriceGrabberDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a9453778-6393-4fa8-8108-f1998422d3b4" absoluteBounds="2.125, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/PriceGrabberDataContext/Notification" />
+      <nestedChildShapes>
+        <elementListCompartment Id="42539a56-f843-4a22-88ba-2ffe164cc565" absoluteBounds="2.1399999999999997, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.ebay.com/marketplace/search/v1/services" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="findItemsByKeywordsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ack" type="xs:string" />
+        <xs:element name="version" type="xs:string" />
+        <xs:element name="timestamp" type="xs:dateTime" />
+        <xs:element name="searchResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="item">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="itemId" type="xs:unsignedLong" />
+                    <xs:element name="title" type="xs:string" />
+                    <xs:element name="globalId" type="xs:string" />
+                    <xs:element minOccurs="0" name="subtitle" type="xs:string" />
+                    <xs:element name="primaryCategory">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="categoryId" type="xs:unsignedShort" />
+                          <xs:element name="categoryName" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="galleryURL" type="xs:string" />
+                    <xs:element name="viewItemURL" type="xs:string" />
+                    <xs:element minOccurs="0" name="productId">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:unsignedInt">
+                            <xs:attribute name="type" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" name="paymentMethod" type="xs:string" />
+                    <xs:element name="autoPay" type="xs:boolean" />
+                    <xs:element minOccurs="0" name="postalCode" type="xs:unsignedInt" />
+                    <xs:element name="location" type="xs:string" />
+                    <xs:element name="country" type="xs:string" />
+                    <xs:element name="shippingInfo">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="shippingServiceCost">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:decimal">
+                                  <xs:attribute name="currencyId" type="xs:string" use="required" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="shippingType" type="xs:string" />
+                          <xs:element maxOccurs="unbounded" name="shipToLocations" type="xs:string" />
+                          <xs:element name="expeditedShipping" type="xs:boolean" />
+                          <xs:element name="oneDayShippingAvailable" type="xs:boolean" />
+                          <xs:element name="handlingTime" type="xs:unsignedByte" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="sellingStatus">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="currentPrice">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:decimal">
+                                  <xs:attribute name="currencyId" type="xs:string" use="required" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="convertedCurrentPrice">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:decimal">
+                                  <xs:attribute name="currencyId" type="xs:string" use="required" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="sellingState" type="xs:string" />
+                          <xs:element name="timeLeft" type="xs:duration" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="listingInfo">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="bestOfferEnabled" type="xs:boolean" />
+                          <xs:element name="buyItNowAvailable" type="xs:boolean" />
+                          <xs:element name="startTime" type="xs:dateTime" />
+                          <xs:element name="endTime" type="xs:dateTime" />
+                          <xs:element name="listingType" type="xs:string" />
+                          <xs:element name="gift" type="xs:boolean" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="returnsAccepted" type="xs:boolean" />
+                    <xs:element minOccurs="0" name="galleryPlusPictureURL" type="xs:string" />
+                    <xs:element name="condition">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="conditionId" type="xs:unsignedShort" />
+                          <xs:element name="conditionDisplayName" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="isMultiVariationListing" type="xs:boolean" />
+                    <xs:element minOccurs="0" name="discountPriceInfo">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="originalRetailPrice">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:decimal">
+                                  <xs:attribute name="currencyId" type="xs:string" use="required" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="pricingTreatment" type="xs:string" />
+                          <xs:element name="soldOnEbay" type="xs:boolean" />
+                          <xs:element name="soldOffEbay" type="xs:boolean" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="topRatedListing" type="xs:boolean" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="count" type="xs:unsignedByte" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="paginationOutput">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pageNumber" type="xs:unsignedByte" />
+              <xs:element name="entriesPerPage" type="xs:unsignedByte" />
+              <xs:element name="totalPages" type="xs:unsignedInt" />
+              <xs:element name="totalEntries" type="xs:unsignedInt" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="itemSearchURL" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

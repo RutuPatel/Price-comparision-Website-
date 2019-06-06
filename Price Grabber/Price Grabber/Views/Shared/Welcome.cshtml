@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Welcome";
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}         
+<div class="main">
+    <div class="container">
+        <div class="col-md-7">
+            <img src="~/Content/Theme/img/logos/login.jpg" alt="logo" style="padding-top: 60px; padding-bottom: 40px; height: 450px; width: 450px; padding-left: 50px;" />
+        </div>
+        <div class="row">
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="col-md-5">
+                
+                    @using (Html.BeginForm())
+                      {
+                        
+                        <br />
+                        <br />
+                        <br />
+                        <h3 class="text-center" style="color:lightseagreen">Congratulations!</h3>
+                        <br />
+                        <p>
+                           Thank you for Registration.You account has been created.In order to get in please @Html.ActionLink("LogIn", "LogIn")
+                        </p>
+                     
+
+                        <br />
+                        <br />
+                    }
+               
+         
+             </div>
+         
+            <br />
+        </div>
+    </div>
+</div>
+

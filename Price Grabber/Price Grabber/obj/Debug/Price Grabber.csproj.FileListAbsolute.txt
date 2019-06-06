@@ -1,0 +1,100 @@
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\csc.exe
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\vbc.exe
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\VBCSCompiler.exe
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x86.dll
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x64.dll
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\Price Grabber.dll.config
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\Price Grabber.dll
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\bin\Price Grabber.pdb
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\obj\Debug\Price Grabber.dll
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\obj\Debug\Price Grabber.pdb
+C:\Users\Rutu Patel\Documents\Price Grabber\Price Grabber\Price Grabber\obj\Debug\Price Grabber.csprojResolveAssemblyReference.cache
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\csc.exe
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\vbc.exe
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\VBCSCompiler.exe
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x86.dll
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x64.dll
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\Price Grabber.dll.config
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\Price Grabber.dll
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\bin\Price Grabber.pdb
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\obj\Debug\Price Grabber.dll
+D:\Project\VIsual studio 2015\25-10-2016\Price Grabber\Price Grabber\Price Grabber\obj\Debug\Price Grabber.pdb
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\roslyn\csc.exe
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\roslyn\vbc.exe
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\roslyn\VBCSCompiler.exe
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x86.dll
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x64.dll
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\Price Grabber.dll.config
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\Price Grabber.dll
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\bin\Price Grabber.pdb
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\obj\Debug\Price Grabber.dll
+C:\Users\patel\Desktop\project\Price Grabber\Price Grabber\obj\Debug\Price Grabber.pdb
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\csc.exe
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\vbc.exe
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\VBCSCompiler.exe
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x86.dll
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x64.dll
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\Price Grabber.dll.config
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\Price Grabber.dll
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\Price Grabber.pdb
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\obj\Debug\Price Grabber.csprojResolveAssemblyReference.cache
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\obj\Debug\Price Grabber.dll
+D:\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\obj\Debug\Price Grabber.pdb
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\csc.exe
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\System.Collections.Immutable.dll
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\System.Reflection.Metadata.dll
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\vbc.exe
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\VBCSCompiler.exe
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\roslyn\VBCSCompiler.exe.config
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x86.dll
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\Microsoft.ApplicationInsights.Extensions.Intercept_x64.dll
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\Price Grabber.dll.config
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\Price Grabber.dll
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\bin\Price Grabber.pdb
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\obj\Debug\Price Grabber.csprojAssemblyReference.cache
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\obj\Debug\Price Grabber.csproj.CoreCompileInputs.cache
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\obj\Debug\Price Grabber.csproj.CopyComplete
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\obj\Debug\Price Grabber.dll
+F:\College Data\Project\7 Sem\Price Grabber\Source Code\Price Grabber\Price Grabber\obj\Debug\Price Grabber.pdb

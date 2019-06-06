@@ -1,0 +1,56 @@
+﻿
+
+
+@{
+    ViewBag.Title = "Index";
+}
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@         
+<div class="container">    
+                
+            <div class="col-md-12">
+                <section id="SearchKeyword">
+                    @using (Html.BeginForm("Getkeyword", "FormController", FormMethod.Post))
+                    {                     
+                        
+                            @Html.AntiForgeryToken()
+                                <!--ValidationSummary-->
+                        @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })*@                        
+                        @*<div class="form-group">  
+                            <form id="search" action="@Url.Action("Index","Home")" method="get">
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(Model =>, new { @class = "form-control input-lg", placeholder = "Search millions of product from online stores" })
+                                    @Html.ValidationMessageFor(m => m.keyword, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-2" style="color:lightseagreen;">
+                                    <input type="submit" value="Search" class="btn btn-success btn-md" />&nbsp;&nbsp;
+                                </div>
+                            </form>
+                        </div>*@
+                        <div class="col-md-8 form-group col-md-offset-1" style="margin-left: 48px; margin-top: 38px;">
+                            <div class="search-box">
+                                <form id="search" action="#" method="get">
+                                    <div class="input-group">
+                                        @*@Html.TextBoxFor(model =>model.keyword, new { @class = "form-control input-lg", placeholder = "Search millions of product from online stores"})*@
+                                        <input class="form-control input-lg searchResult" type="text" name="Searchbox" placeholder="Search millions of product from online stores">
+                                        <span class="input-group-btn">
+                                            <input class="btn btn-warning btn-lg searchSubmit" href="@Url.Action("Index","Home")" type="submit" value="SEARCH" />
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                                <div class="col-md-offset-2 col-md-10" style="color:lightseagreen;">
+                                    <input type="submit" value="" class="btn btn-success btn-md" />&nbsp;&nbsp;
+                                
+                            </div>
+                        </div>
+                        
+                       }
+                </section>         
+             </div>
+           
+        </div>
+   
+

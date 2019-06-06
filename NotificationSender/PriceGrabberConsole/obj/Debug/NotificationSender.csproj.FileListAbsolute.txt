@@ -1,0 +1,9 @@
+C:\Users\patel\Downloads\NotificationSender - Copy\PriceGrabberConsole\bin\Debug\PriceGrabberConsole.exe.config
+C:\Users\patel\Downloads\NotificationSender - Copy\PriceGrabberConsole\bin\Debug\PriceGrabberConsole.exe
+C:\Users\patel\Downloads\NotificationSender - Copy\PriceGrabberConsole\bin\Debug\PriceGrabberConsole.pdb
+C:\Users\patel\Downloads\NotificationSender - Copy\PriceGrabberConsole\obj\Debug\NotificationSender.csprojResolveAssemblyReference.cache
+C:\Users\patel\Downloads\NotificationSender - Copy\PriceGrabberConsole\obj\Debug\PriceGrabberConsole.exe
+C:\Users\patel\Downloads\NotificationSender - Copy\PriceGrabberConsole\obj\Debug\PriceGrabberConsole.pdb
+C:\Users\patel\Desktop\project\NotificationSender - Copy\PriceGrabberConsole\bin\Debug\PriceGrabberConsole.exe.config
+C:\Users\patel\Desktop\project\NotificationSender - Copy\PriceGrabberConsole\obj\Debug\PriceGrabberConsole.exe
+C:\Users\patel\Desktop\project\NotificationSender - Copy\PriceGrabberConsole\obj\Debug\PriceGrabberConsole.pdb

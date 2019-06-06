@@ -1,0 +1,139 @@
+﻿
+@model Price_Grabber.Models.LoginViewModel
+@{
+    ViewBag.Title = "LogIn";
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}         
+<div class="main">
+    <div class="container">
+        <div class="col-md-7">
+            <img src="~/Content/Theme/img/logos/login.jpg" alt="logo" style="padding-top: 60px; padding-bottom: 40px; height: 450px; width: 450px; padding-left: 50px;" />
+        </div>
+        <div class="row">
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="col-md-5">
+                <section id="loginForm">
+                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                      {
+                        @Html.AntiForgeryToken()
+                        <br />
+                        <br />
+                        <br />
+                        <h3 class="text-center" style="color:darkcyan">LOGIN</h3>
+                        <br />
+
+                        <!--ValidationSummary-->
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                          <!--Email-->
+                        <div class="form-group" style="color:darkcyan">
+                            <label class="col-md-2 control-label" >E-mail</label>
+                            <div class="col-md-10">                               
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email Address" })
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                         <!--Password-->
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" style="color:darkcyan">Password</label>
+                            <div class="col-md-10">                              
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <!--Email-->
+                        @*<div class="form-group">
+                            @Html.LabelFor(m => m.Email, new { @class = " col-md-2 control-label" , @style = "color:lightseagreen" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder= "Email Address" })
+
+                            </div>
+                        </div>*@
+
+
+                        @*<div class="form-group">
+                            @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label", @style = "color:lightseagreen" })
+                            <div class="col-md-10">
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                        <!--RememberMe-->
+                        <div class="form-group">
+                            <div class="col-md-offset-3">
+                                <div class="checkbox">
+                                    @Html.CheckBoxFor(m => m.RememberMe)
+                                    @Html.LabelFor(m => m.RememberMe)
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--login button & forgot password button-->
+                         <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10" style="color:lightseagreen;">
+                                <input type="submit" value="Login" class="btn btn-success btn-md" />&nbsp;&nbsp;                
+                                <a class="hover" href="@Url.Action("ForgotPassword", "Account")">
+                                    <input type="button" name="Forget password" class="btn btn-danger btn-md" value="Forgot Password ?" />
+                                    @*<input type="button" >Forgot Password</input>*@
+                                </a> 
+
+                                <!-- Modal for FORGOT model-->
+                                <div id="myModal" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title" style="color:lightseagreen">Forgot your password?</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label",style="color:lightseagreen" })
+                                                    <div class="col-md-10">
+                                                        @Html.TextBoxFor(m => m.Email, new { @class = " form-control",placeholder="Enter the email to reset your password" })
+                                                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-md-offset-2 col-md-10" >
+                                                        <input type="submit" class="btn btn-danger"  value="Send Email" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                    }
+                </section>
+         
+             </div>
+            <div class="col-md-6">
+                <section id="socialLoginForm">
+                    @*@Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })*@
+                </section>
+            </div>
+            <br />
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,277 @@
+﻿
+
+@model Price_Grabber.Models.EmailModel
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+  
+<div class="row">
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="col-md-5">
+        <section id="SendSms">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>EmailModel</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.From, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.From, new { htmlAttributes = new { @class = "form-control",  placeholder = "Enter the  sender Email address" } })
+                            @Html.ValidationMessageFor(model => model.From, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" , placeholder = "Enter the sender password" } })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.To, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.To, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter the receiver Email address" } })
+                            @Html.ValidationMessageFor(model => model.To, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Subject, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Subject" } })
+                            @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Body, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Body, new { htmlAttributes = new { @class = "form-control", placeholder = "leave you message" } })
+                            @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Create" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+
+                        @*<h3 class="text-center" style="color:lightseagreen">Notification</h3>
+                        <hr />
+                   
+
+                        <!--ValidationSummary-->
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                          <!--Email-->
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" style="color:lightseagreen">From</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" placeholder="E-mail Address" />
+                                @Html.TextBoxFor(m => m.From, new { @class = "form-control", placeholder = "Enter the sender contact" })
+                                @Html.ValidationMessageFor(m => m.From, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                         <!--Password-->
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" style="color:lightseagreen">To</label>
+                            <div class="col-md-10">
+                                <input type="password" class="form-control" placeholder="Password" />
+                                @Html.TextBoxFor(m => m.To, new { @class = "form-control", placeholder = "Enter the reciver contact" })
+                                @Html.ValidationMessageFor(m => m.To, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" style="color:lightseagreen">Message</label>
+                            <div class="col-md-10">
+                                <input type="password" class="form-control" placeholder="Password" />
+                                @Html.TextBoxFor(m => m.Message, new { @class = "form-control", placeholder = "Enter the message" })
+                                @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" style="color:lightseagreen">Password</label>
+                            <div class="col-md-10">
+                                <input type="password" class="form-control" placeholder="Password" />
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter the password" })
+                                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                        <input type="submit" value="Send" id="sms" class="btn btn-success btn-md" />
+                        </div>
+
+                        <!--Email-->
+                        <div class="form-group">
+                                @Html.LabelFor(m => m.Email, new { @class = " col-md-2 control-label" , @style = "color:lightseagreen" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder= "Email Address" })
+
+                                </div>
+                            </div>
+
+
+                        <div class="form-group">
+                                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label", @style = "color:lightseagreen" })
+                                <div class="col-md-10">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        <!--RememberMe-->                   
+
+                        <!--login button & forgot password button-->
+                       
+                        <br />
+                        <br />*@
+            }
+        </section>
+
+    </div>
+    
+    <br />
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*@using Microsoft.AspNet.Identity
+@{ 
+    PricegrabberEntities db = new PricegrabberEntities();
+    var user = new User();
+    if (Session["Email"] != null)
+    {
+        Console.WriteLine(Session["Email"]);
+        var email = Session["Email"].ToString();
+        user = db.Users.FirstOrDefault(x => x.Email == email);
+    }
+}
+<!-- BEGIN TOP BAR -->
+<div class="pre-header navbar-fixed-top" style="background-color:lightseagreen;">
+    <div class="container-fluid">
+            <!-- BEGIN TOP BAR LEFT PART -->
+        <div class="row">
+            <div class="col-md-5 col-md-offset-1 col-sm-6 additional-shop-info" style="margin-left: 30px;">
+                <ul class="list-unstyled list-inline">
+                    <li><i class="fa fa-phone" style="color:white;"></i><span style="color:black!important;"><b>+91 7874048202</b></span></li>
+                    <li><i class="fa fa-home" style="color:white;"></i><a href="@Url.Action("Index","Home")" style="color:black;"><b>&nbsp;Home</b></a></li>
+                </ul>               
+            </div>   
+            <!-- END TOP BAR LEFT PART -->
+            <!-- BEGIN TOP BAR MENU -->
+            <div class="col-md-6 col-sm-6 additional-nav" style="padding-right: 0px; padding-left: 0px;">
+                <ul class="list-unstyled list-inline pull-right">
+                    @if (Session["Email"]!=null)
+                    {
+                        <li><a href="shop-account.html" style="color:white;">Hello <a style="color:black;">&nbsp; @user.Email</a></a></li>
+                        <li><span class="glyphicon glyphicon-bell" style="color:white;"></span>
+                            <div id="myModal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title" style="color:lightseagreen">Forgot your password?</h4>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(m => m.From, new { @class = "col-md-2 control-label", style = "color:lightseagreen" })
+
+                                                <div class="col-md-10">
+                                                    @Html.TextBoxFor(m => m.From, new { @class = " form-control", placeholder = "Enter the email to reset your password" })
+
+                                                    @Html.ValidationMessageFor(m => m.From, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                @Html.LabelFor(m => m.To, new { @class = "col-md-2 control-label", style = "color:lightseagreen" })
+
+                                                <div class="col-md-10">
+                                                    @Html.TextBoxFor(m => m.To, new { @class = " form-control", placeholder = "Enter the email to reset your password" })
+
+                                                    @Html.ValidationMessageFor(m => m.To, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                @Html.LabelFor(m => m.Message, new { @class = "col-md-2 control-label", style = "color:lightseagreen" })
+
+                                                <div class="col-md-10">
+                                                    @Html.TextBoxFor(m => m.Message, new { @class = " form-control", placeholder = "Enter the email to reset your password" })
+
+                                                    @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label", style = "color:lightseagreen" })
+
+                                                <div class="col-md-10">
+                                                    @Html.TextBoxFor(m => m.Password, new { @class = " form-control", placeholder = "Enter the email to reset your password" })
+
+                                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-offset-2 col-md-10">
+                                                    <input type="submit" class="btn btn-danger" value="Send notificaton" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </li>
+                        <li><a href="@Url.Action("LogOff","Account")" style="color:black;"><span class="glyphicon glyphicon-off" style="color:white;"></span>&nbsp; LogOut</a></li>
+                    }
+                    else
+                    {                        
+                        <li><a href="#" title="Header" data-toggle="popover" data-placement="top" data-content="There"><span class="glyphicons glyphicons-shopping-cart" style="color:white;"></span></a></li>
+                        <li><i class="fa fa-user" style="color:white;"></i><a href="@Url.Action("Register","Account")"style="color:black;">SignUp</a></li>
+                        <li><i class="fa fa-sign-in"style="color:white;"></i><a href="@Url.Action("LogIn","Account")"style="color:black;">LogIn</a>                         
+                    </li>
+                    }
+                </ul>
+            </div>
+            <!-- END TOP BAR MENU -->
+        </div>
+    </div>
+</div>
+<!-- END TOP BAR -->*@
+
+
+
+
